@@ -1,3 +1,10 @@
+### Requirements
+- vim (with vundle)
+- clang as c++ compiler
+- clangd
+- YCM
+- Python3
+
 ### Installation
 **Install clangd**
 ```bash
@@ -17,4 +24,12 @@ python3 install.py --clangd-completer
 **Use cmake to generate compilation database**
 Add -DCMAKE_EXPORT_COMPILE_COMMANDS=ON when configuring (or add set( CMAKE_EXPORT_COMPILE_COMMANDS ON ) to CMakeLists.txt) and copy or symlink the generated database, *compile_commands.json*, to the root of the project.
 
-### Use YCM
+### Vim configuration
+" Let clangd fully control code completion
+let g:ycm_clangd_uses_ycmd_caching = 0
+
+" Use installed clangd, not YCM-bundled clangd which doesn't get updates.
+let g:ycm_clangd_binary_path = exepath("clangd")
+
+
+
