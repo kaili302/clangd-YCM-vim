@@ -1,9 +1,10 @@
 ### Installation
-**Install cland**
+**Install clangd**
 ```bash
 sudo apt install clangd
 ```
 **Install YouCompleteMe in vim with vundle**
+
 Plugin 'Valloric/YouCompleteMe'
 
 **Compile YCM with clangd as completion engine**
